@@ -4,8 +4,70 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b15a8688c387d103e1668341995aa88d",
+    "content-hash": "c7fc50c0fb17761a3eb4f3a56a61b181",
     "packages": [
+        {
+            "name": "asantibanez/laravel-blade-sortable",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asantibanez/laravel-blade-sortable.git",
+                "reference": "b425ac56238ff2746ccea8ced82cdc83b7b0db73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asantibanez/laravel-blade-sortable/zipball/b425ac56238ff2746ccea8ced82cdc83b7b0db73",
+                "reference": "b425ac56238ff2746ccea8ced82cdc83b7b0db73",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^7.0|^8.0|^9.0",
+                "php": "^7.2|^7.3|^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.0|^6.0",
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Asantibanez\\LaravelBladeSortable\\LaravelBladeSortableServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelBladeSortable": "Asantibanez\\LaravelBladeSortable\\LaravelBladeSortableFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Asantibanez\\LaravelBladeSortable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrés Santibáñez",
+                    "email": "santibanez.andres@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Custom Blade components to add sortable/drag-and-drop HTML elements in your apps",
+            "homepage": "https://github.com/asantibanez/laravel-blade-sortable",
+            "keywords": [
+                "asantibanez",
+                "laravel-blade-sortable"
+            ],
+            "support": {
+                "issues": "https://github.com/asantibanez/laravel-blade-sortable/issues",
+                "source": "https://github.com/asantibanez/laravel-blade-sortable/tree/master"
+            },
+            "time": "2022-08-30T14:53:25+00:00"
+        },
         {
             "name": "bacon/bacon-qr-code",
             "version": "2.0.8",
