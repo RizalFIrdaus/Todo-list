@@ -29,19 +29,24 @@
     </div>
     <div class="px-10 py-5">
         <div class="todo-app w-full max-h-[520px] overflow-auto">
+            <x-laravel-blade-sortable::sortable >
             @foreach ($todo as $data)
-                <div 
-                    class="flex my-5 items-center justify-between p-4 m-4 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <div class="max-w-2xl">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data->tittle }}</h5>
-                        <p class="font-normal text-slate-400 dark:text-gray-400">{{ $data->subtitle }} 
-                        </p>
+                <x-laravel-blade-sortable::sortable-item sort-key="{{ $data->id }}">
+                    <div 
+                        class="flex my-5 items-center justify-between p-4 m-4 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <div class="max-w-2xl">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $data->tittle }}</h5>
+                            <p class="font-normal text-slate-400 dark:text-gray-400">{{ $data->subtitle }} 
+                            </p>
+                        </div>
+                        <div wire:click.prevent='destroy({{ $data->id }})'>
+                            <i class="fa-solid fa-trash text-red-500 shadow-md cursor-pointer hover:text-slate-800" ></i>
+                        </div>
                     </div>
-                    <div wire:click.prevent='destroy({{ $data->id }})'>
-                        <i class="fa-solid fa-trash text-red-500 shadow-md cursor-pointer hover:text-slate-800" ></i>
-                    </div>
-                </div>
-            @endforeach
+                </x-laravel-blade-sortable::sortable-item>
+                @endforeach
+            </x-laravel-blade-sortable::sortable>
+          
         </div>
     </div>
 </div>
