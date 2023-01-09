@@ -23,6 +23,7 @@ class Todolist extends Component
     {
         $this->validate();
         ModelsTodolist::create([
+            'user_id' => auth()->user()->id,
             'tittle' => $this->title,
             'subtitle' => 'Text some description',
             'done' => false
@@ -37,7 +38,7 @@ class Todolist extends Component
 
     public function render()
     {
-        $this->todo = ModelsTodolist::all();
+        $this->todo = ModelsTodolist::where('user_id', auth()->user()->id)->get();
         return view('livewire.todolist');
     }
 }

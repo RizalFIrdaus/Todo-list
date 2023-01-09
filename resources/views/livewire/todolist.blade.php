@@ -29,7 +29,11 @@
     </div>
     <div class="px-10 py-5">
         <div class="todo-app w-full max-h-[520px] overflow-auto">
-            <x-laravel-blade-sortable::sortable >
+            <x-laravel-blade-sortable::sortable
+            animation="1000"
+            ghost-class="opacity-25"
+            drag-handle="drag-handle"
+            >
             @foreach ($todo as $data)
                 <x-laravel-blade-sortable::sortable-item sort-key="{{ $data->id }}">
                     <div 
