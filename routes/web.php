@@ -25,5 +25,4 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', [TodolistController::class, 'index'])->name('dashboard');
-    Route::post('/post-todo', Todolist::class)->name('post-todo');
 });
