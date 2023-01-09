@@ -31,7 +31,6 @@ class Todolist extends Component
     }
     public function destroy($id)
     {
-        dd($id);
         $todo = ModelsTodolist::findOrFail($id);
         $todo->delete();
     }
